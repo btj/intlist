@@ -7,13 +7,23 @@ import org.junit.jupiter.api.Test;
 class IntListTest {
 
 	@Test
-	void test() {
+	void testAddFirst() {
 		IntList myList = new IntList();
-		myList.add(7);
-		myList.add(42);
+		myList.addFirst(42);
+		myList.addFirst(7);
 		assert myList.getSize() == 2;
 		assert myList.get(0) == 7;
 		assert myList.get(1) == 42;
+	}
+
+	@Test
+	void testAdd() {
+		IntList myList = new IntList();
+		myList.add(42);
+		myList.add(7);
+		assert myList.getSize() == 2;
+		assert myList.get(0) == 42;
+		assert myList.get(1) == 7;
 	}
 
 }
